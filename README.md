@@ -28,7 +28,15 @@ Now we set the genesis block
 ```
 geth init /home/sysadmin/verifiable/genesis.json
 ```
-
-Might look like this:
+Now were are going to tell Ethereum where to find it's peers to join the blockchain.  Geth will run and stall--after it stalls CTL+C to exit Geth. 
 ```
-geth init /home/sysadmin/verifiable/genesis.json
+geth --datadir "/home/sysadmin/verifiable"
+```
+```
+CTL+C
+```
+You will now have a hidden directory in your home folder .ethereum
+/home/sysadmin/.ethereum
+/home/sysadmin/.ethereum/geth
+
+
