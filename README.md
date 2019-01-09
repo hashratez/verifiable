@@ -13,10 +13,6 @@ wget https://raw.githubusercontent.com/hashratez/verifiable/master/genesis.json
 ```
 wget https://raw.githubusercontent.com/hashratez/verifiable/master/static-nodes.json
 ```
-return to your home directory
-```
-cd ..
-```
 Install Ethereum
 ```
 sudo apt-get install software-properties-common -y
@@ -24,38 +20,31 @@ sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo apt-get update
 sudo apt-get install ethereum -y
 ```
-Now we set the genesis block
+Now we set the genesis block & set it
 ```
 geth init /home/sysadmin/verifiable/genesis.json
-```
-Now were are going to tell Ethereum where to find it's peers to join the blockchain.  Geth will run and stall--after it stalls CTL+C to exit Geth. 
-```
+
 geth --datadir "/home/sysadmin/verifiable"
 ```
 ```
 CTL+C
 ```
 Now let's start the blockchain (replace "Verifiable-Node1-FRA" with the name of your node):
+
+Now were are going copy the static-nodes.json file to the newly created directory .ethereum after the processes above ran
 ```
-geth --networkid 212121 --port 30211 --ethstats Verifiable-Node1-FRA:cbtestnet@82.223.12.96:3000 --rpc --rpcapi "admin,db,eth,net,personal,web3"
+to tell Ethereum where to find it's peers to join the blockchain.  Geth will run and stall--after it stalls CTL+C to exit Geth. 
 ```
-
-
-
-You will now have a hidden directory in your home folder .ethereum
-
-/home/sysadmin/.ethereum
-
-/home/sysadmin/.ethereum/geth
-
-now we need to reset the peers by moving the nodes file
+cp /home/sysadmin/verifiable/static-nodes.json /home/sysadmin/.ethereum/geth/static-nodes.json
 ```
-cd verifiable
-cp static-nodes.json /home/sysadmin/.ethereum/geth/static-nodes.json
+Now we start the blockchain! Make sure to replace NAME-OF-YOUR-NODE with your text, it should be short but descriptive with a location/region: TechCo-NewYork (no spaces and no crazy special characters).  IT MAKE TAKE A MINUTE or two for the chain to fire up--just wait.   
 ```
-now we reset the directory
+geth --networkid 212121 --port 30211 --ethstats NAME-OF-YOUR-NODE:cbtestnet@82.223.12.96:3000 --rpc --rpcapi "admin,db,eth,net,personal,web3"
 ```
-cp static-nodes.json /root/.ethereum/geth/static-nodes.json
+Remember that if you kill the console the blockchain will stop so you can start with nohup or setup as Linux service.
+```
+nohup COMMAND-STRING &
+```
 
 
 
