@@ -8,10 +8,10 @@ cd verifiable
 ```
 Download the two boot files to your directory
 ```
-wget https://github.com/hashratez/verifiable/blob/master/genesis.json
+wget https://raw.githubusercontent.com/hashratez/verifiable/master/genesis.json
 ```
 ```
-wget https://github.com/hashratez/verifiable/blob/master/static-nodes.json
+wget https://raw.githubusercontent.com/hashratez/verifiable/master/static-nodes.json
 ```
 return to your home directory
 ```
