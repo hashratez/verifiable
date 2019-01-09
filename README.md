@@ -5,13 +5,11 @@ For example:
 ```
 https://github.com/hashratez/verifiable/blob/master/genesis.json
 ```
+```
+https://github.com/hashratez/verifiable/blob/master/static-nodes.json
+```
 
-Typical Windows Geth command to initialize the blockchain
-```
-C:\Program Files\Geth>geth init C:\Users\name\AppData\Roaming\Ethereum\genesis.json
-```
-For Linux
-```
+
 geth init $~/genesis.json
 ```
 Might look like this:
