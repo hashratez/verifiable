@@ -29,9 +29,7 @@ geth --datadir "/home/sysadmin/verifiable"
 ```
 CTL+C
 ```
-Now let's start the blockchain (replace "Verifiable-Node1-FRA" with the name of your node):
-
-Now were are going copy the static-nodes.json file to the newly created directory .ethereum (created automatically by the processes above) to tell Ethereum where to find it's peers to join the blockchain. 
+We are going to copy static-nodes.json to the newly created (by the command we just ran) direcory .ethereum/geth 
 ```
 cp /home/sysadmin/verifiable/static-nodes.json /home/sysadmin/.ethereum/geth/static-nodes.json
 ```
