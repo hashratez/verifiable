@@ -31,9 +31,7 @@ CTL+C
 ```
 Now let's start the blockchain (replace "Verifiable-Node1-FRA" with the name of your node):
 
-Now were are going copy the static-nodes.json file to the newly created directory .ethereum after the processes above ran
-```
-to tell Ethereum where to find it's peers to join the blockchain.  Geth will run and stall--after it stalls CTL+C to exit Geth. 
+Now were are going copy the static-nodes.json file to the newly created directory .ethereum (created automatically by the processes above) to tell Ethereum where to find it's peers to join the blockchain. 
 ```
 cp /home/sysadmin/verifiable/static-nodes.json /home/sysadmin/.ethereum/geth/static-nodes.json
 ```
