@@ -36,7 +36,19 @@ geth --datadir "/home/sysadmin/verifiable"
 CTL+C
 ```
 You will now have a hidden directory in your home folder .ethereum
+
 /home/sysadmin/.ethereum
+
 /home/sysadmin/.ethereum/geth
+
+now we need to reset the peers by moving the nodes file
+```
+cd verifiable
+cp static-nodes.json /home/sysadmin/.ethereum/geth/static-nodes.json
+```
+now we reset the directory
+```
+
+
 
 
