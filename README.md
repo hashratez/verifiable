@@ -1,5 +1,11 @@
 # verifiable
-Verifiable Development Depository
+Setup a Verifiable Node
+Download the genesis & static json files to your directory where you want your blockchain data
+For example:
+```
+https://github.com/hashratez/verifiable/blob/master/genesis.json
+```
+
 Typical Windows Geth command to initialize the blockchain
 ```
 C:\Program Files\Geth>geth init C:\Users\name\AppData\Roaming\Ethereum\genesis.json
