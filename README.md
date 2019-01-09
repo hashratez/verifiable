@@ -35,7 +35,7 @@ geth --datadir "/home/sysadmin/verifiable"
 ```
 CTL+C
 ```
-Now let's start the blockchain:
+Now let's start the blockchain (replace "Verifiable-Node1-FRA" with the name of your node):
 ```
 geth --networkid 212121 --port 30211 --ethstats Verifiable-Node1-FRA:cbtestnet@82.223.12.96:3000 --rpc --rpcapi "admin,db,eth,net,personal,web3"
 ```
