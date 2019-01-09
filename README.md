@@ -35,6 +35,13 @@ geth --datadir "/home/sysadmin/verifiable"
 ```
 CTL+C
 ```
+Now let's start the blockchain:
+```
+geth --networkid 212121 --port 30211 --ethstats Verifiable-Node1-FRA:cbtestnet@82.223.12.96:3000 --rpc --rpcapi "admin,db,eth,net,personal,web3"
+```
+
+
+
 You will now have a hidden directory in your home folder .ethereum
 
 /home/sysadmin/.ethereum
@@ -48,7 +55,7 @@ cp static-nodes.json /home/sysadmin/.ethereum/geth/static-nodes.json
 ```
 now we reset the directory
 ```
-
+cp static-nodes.json /root/.ethereum/geth/static-nodes.json
 
 
 
