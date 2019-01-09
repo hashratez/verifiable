@@ -24,10 +24,11 @@ sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo apt-get update
 sudo apt-get install ethereum -y
 ```
-
-
-geth init $~/genesis.json
+Now we set the genesis block
 ```
+geth init /home/sysadmin/verifiable/genesis.json
+```
+
 Might look like this:
 ```
 geth init /home/sysadmin/verifiable/genesis.json
