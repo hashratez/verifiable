@@ -23,7 +23,7 @@ geth init /home/sysadmin/verifiable/genesis.json
 ```
 Now move the the newly created directory
 ```
-cd .ethereum
+cd /.ethereum/geth
 ```
 Here we will download the list of other Verifiable nodes to Geth knows where to connect
 ```
