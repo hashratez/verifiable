@@ -29,13 +29,6 @@ Here we will download the list of other Verifiable nodes to Geth knows where to 
 ```
 wget https://raw.githubusercontent.com/hashratez/verifiable/master/static-nodes.json
 ```
-```
-CTL+C
-```
-We are going to copy static-nodes.json to the newly created (by the command we just ran) direcory .ethereum/geth 
-```
-cp /home/sysadmin/verifiable/static-nodes.json /home/sysadmin/.ethereum/geth/static-nodes.json
-```
 Now we start the blockchain! Make sure to replace NAME-OF-YOUR-NODE with your text, it should be short but descriptive with a location/region: TechCo-NewYork (no spaces and no crazy special characters).  IT MAKE TAKE A MINUTE or two for the chain to fire up--just wait.   
 ```
 geth --networkid 212121 --port 30211 --ethstats NAME-OF-YOUR-NODE:cbtestnet@82.223.12.96:3000 --rpc --rpcapi "admin,db,eth,net,personal,web3"
