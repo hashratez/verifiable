@@ -21,9 +21,11 @@ Now we set the genesis block & set it
 ```
 geth init /home/sysadmin/verifiable/genesis.json
 ```
+Now move the the newly created directory
 ```
 cd .ethereum
 ```
+Here we will download the list of other Verifiable nodes to Geth knows where to connect
 ```
 wget https://raw.githubusercontent.com/hashratez/verifiable/master/static-nodes.json
 ```
