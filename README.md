@@ -8,10 +8,7 @@ cd verifiable
 ```
 Download the two boot files to your directory
 ```
-wget https://raw.githubusercontent.com/hashratez/verifiable/master/genesis.json
-```
-```
-wget https://raw.githubusercontent.com/hashratez/verifiable/master/static-nodes.json
+sudo wget https://raw.githubusercontent.com/hashratez/verifiable/master/genesis.json
 ```
 Install Ethereum
 ```
@@ -23,8 +20,12 @@ sudo apt-get install ethereum -y
 Now we set the genesis block & set it
 ```
 geth init /home/sysadmin/verifiable/genesis.json
-
-geth --datadir "/home/sysadmin/verifiable"
+```
+```
+cd .ethereum
+```
+```
+wget https://raw.githubusercontent.com/hashratez/verifiable/master/static-nodes.json
 ```
 ```
 CTL+C
