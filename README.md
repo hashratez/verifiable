@@ -1,31 +1,29 @@
-# verifiable
-Setup a Verifiable Node in Ubuntu 16.04 (later versions should work fine)
-Download the genesis & static json files to your directory where you want your blockchain data.  For example you are user "sysadmin".
-Login to Linux in your home directory /home/sysadmin
+Verifiable Blockchain Non-Signing Node Installation Instructions for Ubuntu 16/18
+
+Make sure you system is upto date with Apt-Get Update & Install etc.
+
+Navigate to the directory where you want your Verifiable Blockhain to reside.
 ```
-mkdir verifiable
-cd verifiable
-```
-Download the two boot files to your directory
+Download the Genesis Definition to your directory.
 ```
 sudo wget https://raw.githubusercontent.com/hashratez/verifiable/master/genesis.json
 ```
-Install Ethereum
+Now we install Ethereum.
 ```
 sudo apt-get install software-properties-common -y
 sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo apt-get update
 sudo apt-get install ethereum -y
 ```
-Now we set the genesis block & set it
+Now we set the genesis block & set it.
 ```
-geth init /home/sysadmin/verifiable/genesis.json
+geth init genesis.json
 ```
-Now move the the newly created directory
+Now move the the newly created directory.
 ```
 cd /.ethereum/geth
 ```
-Here we will download the list of other Verifiable nodes to Geth knows where to connect
+Here we will download the list of other Verifiable nodes to Geth knows where to connect.
 ```
 wget https://raw.githubusercontent.com/hashratez/verifiable/master/static-nodes.json
 ```
